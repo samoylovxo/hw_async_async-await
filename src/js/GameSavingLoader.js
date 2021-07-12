@@ -11,6 +11,6 @@ export default class GameSavingLoader {
   async load() {
     const resolveBuffer = await read();
     const saveObj = await json(resolveBuffer);
-    return saveObj;
+    return JSON.parse(saveObj);
   }
 }
